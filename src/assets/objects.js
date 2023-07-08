@@ -107,3 +107,6 @@ const menu = [
     page: "Technology"
   }
 ]
+
+
+export default {crew, destination, technology, menu}
