@@ -32,13 +32,17 @@ header {
     backdrop-filter: blur(8px);
     position: absolute;
     right: 0;
-    left: 800px;
-    li {
+    width: 55vw;
+    a {
       display: flex;
       gap: 10px;
       color: white;
       font-family: "Barlow Condensed", sans-serif;
       font-size: larger;
+      & .selected-link-line {
+        border-bottom: 2px solid white;
+      }
     }
   }
 }
+

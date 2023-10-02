@@ -85,28 +85,4 @@ const technology = [
   },
 ];
 
-const menu = [
-  {
-    id: 1,
-    number: "00",
-    page: "Home"
-  },
-  {
-    id: 2,
-    number: "01",
-    page: "Destination"
-  },
-  {
-    id: 3,
-    number: "02",
-    page: "Crew"
-  },
-  {
-    id: 4,
-    number: "03",
-    page: "Technology"
-  }
-]
-
-
-export default {crew, destination, technology, menu}
+export default {crew, destination, technology}
