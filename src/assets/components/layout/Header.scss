@@ -5,14 +5,16 @@ header {
   padding: 0 50px;
   margin-top: 50px;
   position: fixed;
-  width: 100%; 
+  width: 100%;
+  z-index: 1000;
   img {
-    height: 50%;
-    padding-left: 20px;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
   }
-  .line{
+  .line {
     opacity: 0.25;
-    background-color: #FFF;
+    background-color: #fff;
     height: 1px;
     width: 35%;
     position: absolute;
@@ -26,7 +28,7 @@ header {
     padding-right: 400px;
     padding-left: 150px;
     gap: 50px;
-    height: 100px;
+    height: 96px;
     margin-right: 0;
     background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(8px);
@@ -39,10 +41,83 @@ header {
       color: white;
       font-family: "Barlow Condensed", sans-serif;
       font-size: larger;
-      & .selected-link-line {
-        border-bottom: 2px solid white;
-      }
+    }
+    .selected-link-line {
+      border-bottom: 2px solid white;
+      line-height: 90px;
+    }
+  }
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    cursor: pointer;
+    z-index: 100000;
+    span {
+      width: 20px;
+      height: 2px;
+      background: white;
+      transition: all 0.3s linear;
+      position: relative;
+      transform-origin: -1.25px;
+    }
+    &.open span:nth-child(1) {
+      transform: rotate(45deg);
+    }
+    &.open span:nth-child(2) {
+      opacity: 0;
+    }
+    &.open span:nth-child(3) {
+      transform: rotate(-45deg);
     }
   }
 }
 
+@media (max-width: 375px) {
+  header {
+    padding: 0;
+    margin-top: 0;
+    img{
+      margin: 27px 0 0 20px;
+      position: fixed;
+      top: 0px;
+    }
+    .line {
+      display: none;
+    }
+    ul {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0;
+      width: 50%;
+      height: 100vh;
+      position: fixed;
+      display: none;
+      padding: 60px 0 20px 0;
+      gap: 20px;
+      top: 0;
+      a {
+        width: 100%;
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+      &.open {
+        display: flex;
+      }
+      .selected-link-line {
+        border: none;
+        line-height: 0;
+      }
+    }
+    .hamburger {
+      display: flex;
+    }
+  }
+}

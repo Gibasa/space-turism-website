@@ -5,23 +5,23 @@
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
   .destination-container {
     display: flex;
     flex-direction: column;
     height: 80vh;
     width: 80%;
+    margin-top: 5vh;
     .destination-title {
       display: flex;
       gap: 10px;
-        margin-top: 20vh;
-        margin-left: 2vw;
+      margin-top: 20vh;
+      margin-left: 2vw;
       h2:not(:first-child) {
         color: white;
         font-family: "Barlow Condensed", sans-serif;
         font-weight: 300;
       }
-      h2:first-child{
+      h2:first-child {
         color: grey;
         font-family: "Barlow Condensed", sans-serif;
         font-weight: 300;
@@ -30,6 +30,155 @@
     .destination-main {
       display: flex;
       flex-direction: column;
+      margin-top: 5vh;
+      .destination-content {
+        display: flex;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 25vw;
+        }
+        .destination-content-text {
+          width: 33vw;
+          display: flex;
+          flex-direction: column;
+          margin-left: 20vw;
+          .destination-top-text {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            margin-top: 40px;
+            h2 {
+              color: #fff;
+              font-family: Bellefair;
+              font-size: 100px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            }
+            p {
+              color: #d0d6f9;
+              font-family: Barlow;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 32px; /* 177.778% */
+            }
+          }
+          .destination-text-line {
+            width: 80%;
+            opacity: 0.25;
+            background-color: #fff;
+            height: 1px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+          }
+          .destination-bottom-text {
+            display: flex;
+            justify-content: left;
+            gap: 68px;
+            .destination-distance p,
+            .destination-time p {
+              font-family: Barlow Condensed;
+              font-size: 14px;
+              color: #d0d6f9;
+              letter-spacing: 2.36px;
+              margin-bottom: 12px;
+            }
+            .destination-distance h2,
+            .destination-time h2 {
+              font-family: Bellefair;
+              font-weight: 100;
+              font-size: 28px;
+              letter-spacing: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 375px) {
+  .destination {
+    background-image: url(/Images/destination/background-destination-mobile.jpg);
+    height: 140vh;
+    .destination-container {
+      margin-top: 0;
+      .destination-title{
+        justify-content: center;
+      }      
+      .destination-main {
+        .destination-content {
+          flex-direction: column;
+          width: 100%;
+          img {
+            width: 26vh;
+          }
+          .destination-content-text {
+            width: 80vw;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            .destination-top-text {
+              justify-content: center;
+              text-align: center;
+              width: 100%;
+              margin-top: 90px;
+              h2 {
+                font-size: 56px;
+              }
+              p {
+                font-size: 15px;
+              }
+            }
+            .destination-bottom-text{
+              flex-direction: column;
+              gap: 40px;
+              .destination-distance, .destination-time{
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 376px) and (max-width: 760px) {
+  .destination {
+    background-image: url(/Images/destination/background-destination-tablet.jpg);
+    height: 130vh;
+    .destination-container {
+      margin-top: 0vh;
+      .destination-main {
+        .destination-content {
+          flex-direction: column;
+          width: 100%;
+          img {
+            width: 30vh;
+          }
+          .destination-content-text {
+            width: 80vw;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            .destination-top-text {
+              justify-content: center;
+              text-align: center;
+              width: 100%;
+              margin-top: 60px;
+              h2 {
+                font-size: 80px;
+              }
+              p {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

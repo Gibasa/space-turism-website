@@ -2,7 +2,7 @@ import "./Home.scss"
 
 function Home(){
  return(
-    <div className="home">
+    <dsection className="home">
         <div className="homeContent">
             <p className="content1">SO, YOU WANT TO TRAVEL TO</p>
             <p className="content2">SPACE</p>
@@ -11,7 +11,7 @@ function Home(){
         <div className="homeExplore">
             <p>EXPLORE</p>
         </div>
-    </div>
+    </dsection>
  )
 }
 

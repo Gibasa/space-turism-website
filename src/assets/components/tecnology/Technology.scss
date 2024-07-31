@@ -1,0 +1,181 @@
+.technology {
+  background-image: url(/Images/technology/background-technology-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100vh;
+  display: flex;
+  .technology-container {
+    display: flex;
+    padding: 100px 0 0 0;
+    .technology-left {
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      padding-left: 165px;
+      padding-top: 112px;
+      .technology-title {
+        display: flex;
+        gap: 20px;
+        h2 {
+          color: white;
+          font-family: Barlow Condensed;
+          letter-spacing: 4.72px;
+          font-weight: 100;
+        }
+        h2:first-child {
+          opacity: 25%;
+          font-weight: bold;
+        }
+      }
+      .technology-content {
+        padding-top: 94px;
+        display: flex;
+        gap: 80px;
+        .technology-text {
+          width: 57%;
+          color: white;
+          h3 {
+            font-family: Barlow Condensed;
+            font-size: 16px;
+            letter-spacing: 2.7px;
+            font-weight: 100;
+          }
+          h2 {
+            font-family: Bellefair;
+            font-size: 56px;
+            font-weight: 100;
+          }
+          p {
+            font-family: Barlow;
+            font-size: 18px;
+            line-height: 32px;
+            font-weight: 100;
+          }
+        }
+      }
+    }
+    .technology-image {
+      display: flex;
+      justify-content: flex-end;
+      align-items: end;
+      img {
+        max-width: 515px;
+        margin-left: 100px;
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .technology {
+    background-image: url(/Images/technology/background-technology-mobile.jpg);
+    height: 135vh;
+    .technology-container {
+      flex-direction: column-reverse;
+      .technology-title {
+        position: absolute;
+        top: 100px;
+        left: 80px;
+        h2{
+          font-size: 16px;
+        }
+      }
+      .technology-left {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        .technology-content {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 50px 0;
+          .technology-text {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            h3{
+              font-size: 14px;
+            }
+            h2{
+              font-size: 24px;
+              padding: 20px 0; 
+            }
+            p{
+              font-size: 15px;
+              width: 80%;
+              line-height: 25px;
+            }
+          }
+        }
+      }
+      .technology-image{
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        padding: 0;
+        img{
+          max-width: 100%;
+          height: auto;
+          margin: 0;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 376px) and (max-width: 760px) {
+  .technology {
+    background-image: url(/Images/technology/background-technology-tablet.jpg);
+    height: 200vh;
+    .technology-container {
+      flex-direction: column-reverse;
+      .technology-title {
+        position: absolute;
+        top: 100px;
+        left: 50px;
+      }
+      .technology-left {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        .technology-content {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .technology-text {
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            h2{
+              font-size: 40px;
+              padding: 20px 0; 
+            }
+            p{
+              font-size: 16px;
+            }
+          }
+        }
+      }
+      .technology-image{
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        padding: 0;
+        img{
+          max-width: 100%;
+          height: auto;
+          margin: 0;
+          display: block;
+        }
+      }
+    }
+  }
+}

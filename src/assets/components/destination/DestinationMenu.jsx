@@ -5,10 +5,10 @@ import PropTypes from "prop-types";
 function DestinationMenu({ activeDestination, setActiveDestination }) {
   return (
     <div className="destination-menu">
-      <Link  className={activeDestination === "moon" ? "active" : ""} onClick={() => setActiveDestination("moon")}>MOON</Link>
-      <Link  className={activeDestination === "mars" ? "active" : ""} onClick={() => setActiveDestination("mars")}>MARS</Link>
-      <Link  className={activeDestination === "europa" ? "active" : ""} onClick={() => setActiveDestination("europa")}>EUROPA</Link>
-      <Link  className={activeDestination === "titan" ? "active" : ""} onClick={() => setActiveDestination("titan")}>TITAN</Link>
+      <Link  className={activeDestination === 3 ? "active" : ""} onClick={() => setActiveDestination(3)}>MOON</Link>
+      <Link  className={activeDestination === 2 ? "active" : ""} onClick={() => setActiveDestination(2)}>MARS</Link>
+      <Link  className={activeDestination === 1 ? "active" : ""} onClick={() => setActiveDestination(1)}>EUROPA</Link>
+      <Link  className={activeDestination === 4 ? "active" : ""} onClick={() => setActiveDestination(4)}>TITAN</Link>
     </div>
   );
 }

@@ -1,0 +1,26 @@
+.crew-menu {
+  color: white;
+  font-size: 50px;
+  display: flex;
+  gap: 20px;
+  a {
+    opacity: 0.1744;
+  }
+  .crew-active {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 375px) {
+  .crew-menu{
+    position: absolute;
+    top: 62vh;
+    left: 30vw;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 760px) {
+.crew-menu {
+  align-self: center;
+}
+}
