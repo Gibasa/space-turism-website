@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./public/images/screenshot-spaceapp.png)
+![](/public/images/screenshot-spaceapp.png)
 
 ### Links
 
